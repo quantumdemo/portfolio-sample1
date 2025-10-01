@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-portfolio</title>
+
+	 <link rel="stylesheet" href="/css/style.css">
+	 <link rel="stylesheet" href="/css/footer.css">
+	 <link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+
+
+</head>
+<body>
+	   <!-- Open Toggle -->
+		<a href="#" id="sidebarToggle" class="toggle-btn nav-toggle">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+		</a>
+
+		<!-- Close Toggle -->
+        <a href="#" id="closeToggle" class="toggle-btn">&times;</a>
+
+		<!-- Overlay -->
+		<div id="overlay"></div>
+
+	   <!-- Sidebar -->
+       <aside id="aside-pane">
+			<h1 id="aside-name">Afeez<span>.</span></h1>
+			<nav id="nav-menu">
+				<ul class="page-links">
+					<li class="aside-link"><a href="index.html">Home</a></li>
+					<li class="aside-link"><a href="blog.html">Blog</a></li>
+					<li class="aside-link"><a href="about.html">About</a></li>
+					<li class="aside-link"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="aide-footer">
+				<ul class="nav-social-links">
+					<li><a href="#"><i class="bi bi-facebook"></i> </a></li>
+					<li><a href="#"><i class="bi bi-twitter"></i> </a></li>
+					<li><a href="#"><i class="bi bi-instagram"></i></a></li>
+					<li><a href="#"><i class="bi bi-linkedin"></i> </a></li>
+				</ul>
+
+				<p>Copyright &copy; <span id="year"></span>. All rights reserved.</p> 
+			</div>
+		</aside>
+
+		<!-- Overlay -->
+        <div id="overlay"></div>
+
+		<!-- Main Content -->
+		<main id="main-content">
+			<section class="hero">
+					<div class="overlay"></div>
+				<div class="hero-content">
+					<div class="author-image"></div>
+					<div class="text-content">
+						<h2 class="subheading">Hello, I'm</h2>
+						<h1 class="heading">Afeez Alimi</h1>
+						<p class="description">
+						As a Data Analyst, I specialize in extracting meaningful patterns from data to support strategic business decisions. My work blends analytical rigor with clear communication to drive performance and innovation.
+						</p>
+						<a href="about.html" class="btn-custom">More About Me <span>&rarr;</span></a>
+
+					</div>
+				</div>
+			</section>
+
+			<!--PORTFOLIO SECTION ON PROJECTS -->
+			<section class="portfolio-section">
+				<div class="portfolio-container">
+					<div class="portfolio-heading">
+						<h2>Portfolio</h2>
+						<p>Here are some of my data analysis projects.</p>
+					</div>
+					<div class="projects">
+						<div class="project-card">
+							<div class="project-image" style="background-image: url('images/image_4.jpg');"></div>
+							<div class="project-content">
+								<span class="project-category">Data Visualization</span>
+								<h3>Customer Segmentation Analysis</h3>
+								<p>Analyzed customer data to identify key segments and provide actionable insights for marketing campaigns.</p>
+								<a href="#" class="project-link">View Project →</a>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<div class="project-image" style="background-image: url('images/image_2.jpg');"></div>
+							<div class="project-content">
+								<span class="project-category">Machine Learning</span>
+								<h3>Sales Forecasting Model</h3>
+								<p>Developed a time series model to forecast future sales with high accuracy.</p>
+								<a href="#" class="project-link">View Project →</a>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<div class="project-image" style="background-image: url('images/image_3.jpg');"></div>
+							<div class="project-content">
+								<span class="project-category">Data Cleaning</span>
+								<h3>Data Quality Assessment</h3>
+								<p>Cleaned and preprocessed a large dataset to ensure data quality and consistency.</p>
+								<a href="#" class="project-link">View Project →</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+			<!-- TESTIMONIALS SECTION -->
+			<section class="testimonials-section">
+				<div class="testimonial-container">
+					<div class="testimonial-heading">
+						<h2>Testimonials</h2>
+						<p>What my clients say about my work.</p>
+					</div>
+
+					<div class="testimonials">
+						<div class="testimonial-card">
+							<img src="images/client1.jpg" alt="Client A" class="client-photo">
+							<div class="testimonial-content">
+								<p>"Afeez's analysis helped us understand our customers better. His insights were invaluable!"</p>
+								<span class="client-name">– Client A</span>
+							</div>
+						</div>
+
+						<div class="testimonial-card">
+							<img src="images/client2.jpg" alt="Client B" class="client-photo">
+							<div class="testimonial-content">
+								<p>"The sales forecasting model Afeez built for us has significantly improved our planning process."</p>
+								<span class="client-name">– Client B</span>
+							</div>
+						</div>
+
+						<div class="testimonial-card">
+							<img src="images/client3.jpg" alt="Client C" class="client-photo">
+							<div class="testimonial-content">
+								<p>"Afeez's attention to detail in data cleaning ensured our reports were accurate and reliable."</p>
+								<span class="client-name">– Client C</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- STATS SECTION -->			
+			<section class="stats-section">
+				<div class="stat-container">
+					<div class="stat-heading">
+						<h2>Stats</h2>
+						<p>Some key facts about my work and achievements.</p>
+					</div>
+
+					<div class="stats-grid">
+						<div class="stat-card">
+								<i class="bi bi-folder-check fs-1 text-success" id="stat-icon"></i>
+							<div class="stat-info">
+								<span class="number" data-target="50">0</span>
+								<p>Projects Completed</p>
+							</div>
+						</div>
+
+						<div class="stat-card">
+								<i class="bi bi-people-fill fs-1 text-primary" id="stat-icon"></i>
+							<div class="stat-info">
+								<span class="number" data-target="30">0</span>
+								<p>Happy Customers</p>
+							</div>
+						</div>
+
+						<div class="stat-card">
+								<i class="bi bi-code-slash fs-1 text-dark" id="stat-icon"></i>
+							<div class="stat-info">
+								<span class="number" data-target="1000">0</span>
+								<p>Lines of Code</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!--home footer section -->
+			<footer class="site-footer">
+				<div class="footer-container">
+					<div class="footer-grid">
+						<div class="footer-section">
+							<h2 class="footer-title">Categories</h2>
+							<ul class="footer-links">
+								<li><a class="active" href="blog.html">All</a></li>
+								<li><a href="blog.html">Data Science</a></li>
+								<li><a href="blog.html">Machine Learning</a></li>
+								<li><a href="blog.html">Data Visualization</a></li>
+							</ul>
+						</div>
+
+						<div class="footer-section">
+							<h2 class="footer-title">Have a Question?</h2>
+							<ul class="footer-contact">
+								<li><span><i class="bi bi-geo-alt-fill"></i></span>07, Okoro Street Ibadan, Nigeria</li>
+								<li><span><i class="bi bi-telephone-fill"></i></span> <a href="tel:+2348140020576">08140020576</a></li>
+								<li><span><i class="bi bi-envelope-fill"></i></span> <a href="mailto:afeezolalekanalimi@gmail.com">afeezolalekanalimi@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="footer-bottom">
+						<p>&copy; <span id="main-footer-year"></span> All rights reserved | Designed by <a href="#" target="_blank">Afeez Alimi</a></p>
+					</div>
+				</div>
+			</footer>
+
+		</main>
+
+
+        <script src="js/index.js"></script>
+</body>
+</html>

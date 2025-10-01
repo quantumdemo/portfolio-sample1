@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "data-cleaning",
+    "title": "The Importance of Data Cleaning",
+    "excerpt": "Even the all-powerful Pointing has no control about the blind texts it is an almost...",
+    "category": "Data Analyst",
+    "date": "July 23, 2024",
+    "author": "Admin",
+    "image": "images/image_4.jpg",
+    "authorImage": "images/author.jpg",
+    "contentFile": "content/data-cleaning.html"
+  }
+    ,
+    {
+        "slug": "data-visualization",
+        "title": "Data Visualization Techniques",
+        "excerpt": "The quick brown fox jumps over the lazy dog. A journey of a thousand miles begins with a single step.",
+        "category": "Data Scientist",
+        "date": "August 15, 2024",
+        "author": "Admin",
+        "image": "images/image_2.jpg",
+        "authorImage": "images/author.jpg",
+        "contentFile": "content/data-visualization.html"
+    }
+
+    ,
+    {
+        "slug": "machine-learning",
+        "title": "Introduction to Machine Learning",
+        "excerpt": "Machine learning is a fascinating field that combines statistics, computer science, and data analysis.",
+        "category": "Machine Learning",
+        "date": "July 28, 2025",
+        "author": "Admin",
+        "image": "images/image_3.jpg",
+        "authorImage": "images/author.jpg",
+        "contentFile": "content/machine-learning.html"
+    }
+]

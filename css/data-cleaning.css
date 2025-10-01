@@ -1,0 +1,68 @@
+/* === Blog Post Content (data-cleaning) === */
+
+.data-cleaning-h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.data-cleaning-h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-left: 4px solid #f90; /* Orange accent */
+  padding-left: 0.75rem;
+}
+
+.data-cleaning-paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+.data-cleaning-ul,
+.data-cleaning-ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.data-cleaning-li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.data-cleaning-li strong {
+  color: #222;
+}
+
+/* Optional: style for the container that loads the contentFile */
+#blog-content {
+  max-width: 850px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .data-cleaning-h1 {
+    font-size: 1.5rem;
+  }
+
+  .data-cleaning-h2 {
+    font-size: 1.25rem;
+  }
+
+  .data-cleaning-paragraph,
+  .data-cleaning-li {
+    font-size: 0.95rem;
+  }
+}

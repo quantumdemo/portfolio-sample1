@@ -1,0 +1,387 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #78d5ef;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  color: var(--gray-dark);
+  background-color: var(--light);
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+
+
+/* Sidebar */
+#aside-pane {
+  width: 250px;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#aside-name {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+
+#aside-name span {
+  color: var(--orange); 
+  font-size: 2.5rem;
+}
+
+/* Navigation Menu */
+#nav-menu {
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.page-links {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.aside-link {
+  margin: 0.5rem 0;
+}
+
+.aside-link a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.aside-link a:hover {
+  color: var(--orange);
+  background-color: var(--gray);
+  border-radius: 4px;
+}
+
+/* Active Link Styling (apply class to <li> or <a>) */
+.page-links .active a,
+.page-links a.active {
+  background-color: #f60;
+  color: white;
+}
+
+/* Footer */
+.aide-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.aide-footer p {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Social Links */
+.nav-social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-social-links li a {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-social-links li a:hover {
+  color: #fff;
+}
+
+
+@media (min-width: 768px) {
+#main-content {
+  transition: transform 0.3s ease;
+  padding-left: 250px;
+}
+
+/* Toggle Buttons - initially hidden */
+#sidebarToggle,
+#closeToggle {
+  display: none;
+}
+
+}
+
+body.sidebar-open #main-content {
+  transform: translateX(250px);
+}
+
+
+
+/* Hamburger Button (Three Horizontal Bars) */
+#sidebarToggle {
+  background: transparent;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sidebarToggle .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Close Button */
+#closeToggle {
+  position: fixed;
+  top: 1rem;
+  left: 260px;
+  font-size: 2rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  z-index: 1101;
+  cursor: pointer;
+}
+
+/* Overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+}
+
+body.sidebar-open #overlay {
+  display: block;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  #aside-pane {
+    transform: translateX(-100%);
+  }
+
+  body.sidebar-open #aside-pane {
+    transform: translateX(0);
+  }
+
+  /* Show toggles only on small screens */
+  #sidebarToggle,
+  #closeToggle {
+    display: flex;
+  }
+
+  #closeToggle {
+    margin-left: 0%;
+    text-decoration: none;
+    display: none;
+  }
+
+  #sidebarToggle {
+    flex-direction: column;
+  }
+
+  .page-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .aide-footer {
+    margin-top: 1rem;
+  }
+
+  .nav-social-links {
+    gap: 0.5rem;
+  }
+
+  /* Main Content */
+  #main-content {
+    transition: transform 0.3s ease;
+    margin-left: 0%;
+  }
+}
+
+/* bootstrap Icons */
+
+.nav-social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-social-links li a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--light);
+  font-size: 1rem;
+  text-decoration: none;
+  gap: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+.nav-social-links li a:hover {
+  color: var(--orange);
+}
+
+.nav-social-links .bi {
+  font-size: 1.25rem;
+}
+
+/* main footer section styles */
+.site-footer {
+  background-color: #111;
+  color: #ccc;
+  /*padding: 60px 20px 30px;*/
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@media screen and (min-width: 769px) {
+  .site-footer {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+    
+}
+
+@media screen and (max-width: 768px) {
+  .site-footer {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+    
+}
+
+.site-footer a {
+  color: #f60;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact li span {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
